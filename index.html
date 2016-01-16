@@ -5,13 +5,13 @@
   <title>my_room</title>
 </head>
 <body>
-  <script type="text/javascript">
+<script type="text/javascript">
   var height_array = new Array();
   var width_array = new Array();
   width_array[1] = 640;
   height_array[1] = 480;
 </script>
-<img src="http://25.117.214.53:2905/loading.jpg" class="webcam" id="webcam1" onmousedown="PTZMouseDown1(event)" width="640" height="480" alt="Live Stream" />
+<img src="http://25.6.73.78:2905/loading.jpg" class="webcam" id="webcam1" onmousedown="PTZMouseDown1(event)" width="640" height="480" alt="Live Stream" />
 <script type="text/javascript">
 <!--
 currentCamera1= 1;
@@ -22,7 +22,7 @@ document.images.webcam1.onerror = ErrorImage1();
 function LoadImage1()
 {
         uniq1 = Math.random();
-        document.images.webcam1.src = "http://25.117.214.53:2905/cam_" + currentCamera1 + ".jpg?uniq="+uniq1;
+        document.images.webcam1.src = "http://25.6.73.78:2905/cam_" + currentCamera1 + ".jpg?uniq="+uniq1;
         document.images.webcam1.onload = DoIt1;
 }
 function PTZMouseDown1(e)
@@ -47,7 +47,7 @@ function PTZMouseDown1(e)
         if ((height_array[currentCamera1] != null) && (height_array[currentCamera1] > 0)) y = Math.round((y * 300) / height_array[currentCamera1]);
         if (x > 400) x = 400;
         if (y > 300) y = 300;
-        if (myifr != null) myifr.src = "http://25.117.214.53:2905/ptz?src=" + currentCamera1 + "&moveto_x=" + x + "&moveto_y=" + y +"";
+        if (myifr != null) myifr.src = "http://25.6.73.78:2905/ptz?src=" + currentCamera1 + "&moveto_x=" + x + "&moveto_y=" + y +"";
         return true;
 }
 function getElPos1()
@@ -72,7 +72,7 @@ function ErrorImage1()
               document.images.webcam1.src = "offline.jpg";
               }else{
                 uniq1 = Math.random();
-            document.images.webcam1.src = "http://25.117.214.53:2905/cam_" + currentCamera1 + ".jpg?uniq="+uniq1;
+            document.images.webcam1.src = "http://25.6.73.78:2905/cam_" + currentCamera1 + ".jpg?uniq="+uniq1;
               }
 }
 function DoIt1()
@@ -82,6 +82,7 @@ function DoIt1()
 }
 //-->
 </script>
+
 
 </body>
 </html>
